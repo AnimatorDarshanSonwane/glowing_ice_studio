@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:glowing_ice_studio/view/widgets/top_appbar_widget.dart';
+import '../../viewmodel/item_list_view_model.dart';
+import '../../data/models/item_model.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -14,9 +16,14 @@ class _MyHomePageState extends State<MyHomePage> {
   final ScrollController _scrollController = ScrollController();
   double _backgroundOpacity = 0.0;
 
+  final ItemListViewModel _viewModel = ItemListViewModel();
+  late List<ItemModel> _items;
+
   @override
   void initState() {
     super.initState();
+
+    _items = _viewModel.getItems();
 
     _scrollController.addListener(() {
       double offset = _scrollController.offset;
@@ -48,15 +55,14 @@ class _MyHomePageState extends State<MyHomePage> {
               child: SingleChildScrollView(
                 controller: _scrollController,
                 child: Column(
-                  children: List.generate(
-                    25,
-                    (index) => Container(
+                  children: _items.map((item) {
+                    return Container(
                       margin: const EdgeInsets.all(12),
                       padding: const EdgeInsets.all(20),
                       color: Colors.grey[300],
-                      child: Text("Item $index"),
-                    ),
-                  ),
+                      child: Text(item.title),
+                    );
+                  }).toList(),
                 ),
               ),
             ),
