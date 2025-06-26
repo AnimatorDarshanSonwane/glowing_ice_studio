@@ -14,7 +14,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final ScrollController _scrollController = ScrollController();
-  double _backgroundOpacity = 0.0;
+  double _backgroundOpacity = 0.2;
 
   final ItemListViewModel _viewModel = ItemListViewModel();
   late List<ItemModel> _items;
@@ -27,7 +27,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     _scrollController.addListener(() {
       double offset = _scrollController.offset;
-      double newOpacity = (offset / 100).clamp(0.0, 1.0);
+      double newOpacity = (offset / 100).clamp(0.2, 1.0);
 
       if (newOpacity != _backgroundOpacity) {
         setState(() {
