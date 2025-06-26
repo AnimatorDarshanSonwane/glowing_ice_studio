@@ -4,15 +4,20 @@ import '../../data/models/nav_item_data.dart'; // Import the list
 // Import the model
 
 class TopAppBarWidget extends StatelessWidget {
-  const TopAppBarWidget({super.key});
+
+  final double backgroundOpacity;
+
+  const TopAppBarWidget({super.key, required this.backgroundOpacity});
 
   @override
 Widget build(BuildContext context) {
-  return Container(
+  return AnimatedContainer(
+    duration: const Duration(milliseconds: 300), // Smooth fade
     height: 100,
     padding: const EdgeInsets.symmetric(horizontal: 24),
     decoration: BoxDecoration(
-      color: Colors.black87,
+      // ignore: deprecated_member_use
+      color: Colors.black.withOpacity(backgroundOpacity), // 👈 Fade only this
       // borderRadius: BorderRadius.circular(20), // Rounded all corners
       // To round only top or bottom corners:
       borderRadius: BorderRadius.only(
