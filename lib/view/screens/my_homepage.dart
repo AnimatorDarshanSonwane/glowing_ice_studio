@@ -45,29 +45,45 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SafeArea(
-        child: Column(
-          children: [
-            TopAppBarWidget(backgroundOpacity: _backgroundOpacity),
-            Expanded(
-              child: SingleChildScrollView(
-                controller: _scrollController,
-                child: Column(
-                  children: _items.map((item) {
-                    return Container(
-                      margin: const EdgeInsets.all(12),
-                      padding: const EdgeInsets.all(20),
-                      color: Colors.grey[300],
-                      child: Text(item.title),
-                    );
-                  }).toList(),
+      body: Stack(
+        children: [
+          // Scrollable content: image + list
+          SingleChildScrollView(
+            controller: _scrollController,
+            child: Column(
+              children: [
+                // Fullscreen image
+                SizedBox(
+                  height: screenHeight,
+                  width: double.infinity,
+                  child: Image.asset(
+                    'lib/assets/images/logo_01.png', // Replace with your image
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ),
+
+                // List of items
+                ..._items.map((item) {
+                  return Container(
+                    margin: const EdgeInsets.all(12),
+                    padding: const EdgeInsets.all(20),
+                    color: Colors.grey[300],
+                    child: Text(item.title),
+                  );
+                }).toList(),
+              ],
             ),
-          ],
-        ),
+          ),
+
+          // Sticky Top AppBar
+          SafeArea(
+            child: TopAppBarWidget(backgroundOpacity: _backgroundOpacity),
+          ),
+        ],
       ),
     );
   }
