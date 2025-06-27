@@ -1,0 +1,10 @@
+^D:\STUDY SUBJECT\FLUTTER\FLUTTERPROJECT\GLOWINGICESTUDIO\GLOWING_ICE_STUDIO\BUILD\WINDOWS\X64\CMAKEFILES\3E317E6A33D17C5A38D8ED6D92788C1F\INSTALL_FORCE.RULE
+setlocal
+cd .
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

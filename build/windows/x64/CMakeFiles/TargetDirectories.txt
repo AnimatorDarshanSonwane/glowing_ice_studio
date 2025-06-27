@@ -1,0 +1,10 @@
+D:/Study Subject/FLUTTER/FlutterProject/GlowingIceStudio/glowing_ice_studio/build/windows/x64/CMakeFiles/INSTALL.dir
+D:/Study Subject/FLUTTER/FlutterProject/GlowingIceStudio/glowing_ice_studio/build/windows/x64/CMakeFiles/ALL_BUILD.dir
+D:/Study Subject/FLUTTER/FlutterProject/GlowingIceStudio/glowing_ice_studio/build/windows/x64/CMakeFiles/ZERO_CHECK.dir
+D:/Study Subject/FLUTTER/FlutterProject/GlowingIceStudio/glowing_ice_studio/build/windows/x64/flutter/CMakeFiles/flutter_wrapper_plugin.dir
+D:/Study Subject/FLUTTER/FlutterProject/GlowingIceStudio/glowing_ice_studio/build/windows/x64/flutter/CMakeFiles/flutter_wrapper_app.dir
+D:/Study Subject/FLUTTER/FlutterProject/GlowingIceStudio/glowing_ice_studio/build/windows/x64/flutter/CMakeFiles/flutter_assemble.dir
+D:/Study Subject/FLUTTER/FlutterProject/GlowingIceStudio/glowing_ice_studio/build/windows/x64/flutter/CMakeFiles/INSTALL.dir
+D:/Study Subject/FLUTTER/FlutterProject/GlowingIceStudio/glowing_ice_studio/build/windows/x64/runner/CMakeFiles/glowing_ice_studio.dir
+D:/Study Subject/FLUTTER/FlutterProject/GlowingIceStudio/glowing_ice_studio/build/windows/x64/runner/CMakeFiles/INSTALL.dir
+D:/Study Subject/FLUTTER/FlutterProject/GlowingIceStudio/glowing_ice_studio/build/windows/x64/runner/CMakeFiles/ALL_BUILD.dir

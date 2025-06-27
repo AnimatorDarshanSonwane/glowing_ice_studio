@@ -1,0 +1,28 @@
+^D:\STUDY SUBJECT\FLUTTER\FLUTTERPROJECT\GLOWINGICESTUDIO\GLOWING_ICE_STUDIO\BUILD\WINDOWS\X64\CMAKEFILES\4495080E85BDB619B195C6C1F4FA3025\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E env FLUTTER_ROOT=C:\Users\Avengers\AppData\Local\Flutter\flutter "PROJECT_DIR=D:\Study Subject\FLUTTER\FlutterProject\GlowingIceStudio\glowing_ice_studio" FLUTTER_ROOT=C:\Users\Avengers\AppData\Local\Flutter\flutter "FLUTTER_EPHEMERAL_DIR=D:\Study Subject\FLUTTER\FlutterProject\GlowingIceStudio\glowing_ice_studio\windows\flutter\ephemeral" "PROJECT_DIR=D:\Study Subject\FLUTTER\FlutterProject\GlowingIceStudio\glowing_ice_studio" "FLUTTER_TARGET=D:\Study Subject\FLUTTER\FlutterProject\GlowingIceStudio\glowing_ice_studio\lib\main.dart" DART_DEFINES=RkxVVFRFUl9WRVJTSU9OPTMuMzIuNA==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049NmZiYTI0NDdlOQ==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049OGNkMTllNTA5ZA==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My44LjE= DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false "PACKAGE_CONFIG=D:\Study Subject\FLUTTER\FlutterProject\GlowingIceStudio\glowing_ice_studio\.dart_tool\package_config.json" C:/Users/Avengers/AppData/Local/Flutter/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\STUDY SUBJECT\FLUTTER\FLUTTERPROJECT\GLOWINGICESTUDIO\GLOWING_ICE_STUDIO\BUILD\WINDOWS\X64\CMAKEFILES\4BA8541BA66D737E0CB4E82DA278A745\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^D:\STUDY SUBJECT\FLUTTER\FLUTTERPROJECT\GLOWINGICESTUDIO\GLOWING_ICE_STUDIO\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SD:/Study Subject/FLUTTER/FlutterProject/GlowingIceStudio/glowing_ice_studio/windows" "-BD:/Study Subject/FLUTTER/FlutterProject/GlowingIceStudio/glowing_ice_studio/build/windows/x64" --check-stamp-file "D:/Study Subject/FLUTTER/FlutterProject/GlowingIceStudio/glowing_ice_studio/build/windows/x64/flutter/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

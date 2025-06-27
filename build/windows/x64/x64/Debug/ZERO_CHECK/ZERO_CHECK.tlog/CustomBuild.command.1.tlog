@@ -1,0 +1,10 @@
+^D:\STUDY SUBJECT\FLUTTER\FLUTTERPROJECT\GLOWINGICESTUDIO\GLOWING_ICE_STUDIO\BUILD\WINDOWS\X64\CMAKEFILES\3E317E6A33D17C5A38D8ED6D92788C1F\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SD:/Study Subject/FLUTTER/FlutterProject/GlowingIceStudio/glowing_ice_studio/windows" "-BD:/Study Subject/FLUTTER/FlutterProject/GlowingIceStudio/glowing_ice_studio/build/windows/x64" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "D:/Study Subject/FLUTTER/FlutterProject/GlowingIceStudio/glowing_ice_studio/build/windows/x64/glowing_ice_studio.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

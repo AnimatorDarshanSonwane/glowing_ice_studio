@@ -1,0 +1,144 @@
+{
+   "checksum": "f937dc9fbaf19b5e7e5dbe06ad849b8f",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13243507294773518",
+               "date_last_used": "0",
+               "guid": "e36001eb-081a-439c-bc62-dbfe1c29d330",
+               "id": "7",
+               "name": "Acer",
+               "show_icon": false,
+               "source": "sync",
+               "type": "url",
+               "url": "http://www.acer.com/",
+               "visit_count": 0
+            } ],
+            "date_added": "13274988854381034",
+            "date_last_used": "0",
+            "date_modified": "13274988854381034",
+            "guid": "e5427154-c645-4e73-9373-b6a62a1f0895",
+            "id": "6",
+            "name": "Acer",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "date_added": "13307459869614810",
+            "date_last_used": "0",
+            "guid": "b1780b15-35db-4e93-bacc-7acd9a5d562f",
+            "id": "8",
+            "name": "Current Affairs | चालू घडामोडी | Reliable Academy",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://reliableacademy.com/current-affairs/",
+            "visit_count": 0
+         }, {
+            "date_added": "13312269126564065",
+            "date_last_used": "13337183901560094",
+            "guid": "947f73e8-7b48-4bb8-baab-ef61b3951de4",
+            "id": "9",
+            "name": "(5) WhatsApp",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://web.whatsapp.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "13326871898785725",
+            "date_last_used": "13327682303221253",
+            "guid": "584f4714-815d-4af8-b6c5-22b203490673",
+            "id": "10",
+            "name": "ChatGPT | OpenAI",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://chat.openai.com/auth/login",
+            "visit_count": 0
+         }, {
+            "date_added": "13333742578983015",
+            "date_last_used": "0",
+            "guid": "f1efe1eb-1711-4e00-b110-385cab9d986d",
+            "id": "11",
+            "name": "How to draft a special leave petition - iPleaders",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://blog.ipleaders.in/how-to-draft-a-special-leave-petition/",
+            "visit_count": 0
+         }, {
+            "date_added": "13352617693653868",
+            "date_last_used": "0",
+            "guid": "df55cdb0-a99c-4761-9b32-b8d608fac96b",
+            "id": "12",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "20 Best Memory Improvement Books of All Time - BookAuthority",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://bookauthority.org/books/best-memory-improvement-books",
+            "visit_count": 0
+         }, {
+            "date_added": "13380987701340079",
+            "date_last_used": "0",
+            "guid": "87ac212c-029d-45d5-8545-deb9017addfc",
+            "id": "13",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Unreal Engine 5 Blueprints - The Ultimate Developer Course | Udemy",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.udemy.com/course/ue5-ultimate-bp-course/",
+            "visit_count": 1
+         }, {
+            "date_added": "13392065055380315",
+            "date_last_used": "13395154496946430",
+            "guid": "8cf078bf-e80f-45fb-ad5b-f977e20c6a51",
+            "id": "14",
+            "name": "YouTube",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.youtube.com/",
+            "visit_count": 1
+         } ],
+         "date_added": "13395342231435776",
+         "date_last_used": "0",
+         "date_modified": "13392065055380315",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Favourites bar",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13395342231435780",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other favourites",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13395342231435783",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile favourites",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CkEKHgiIgQISCAWc4qeXAQAAKg4QABgBIAAoBjAAOABAABIAKhhwOC9mNzJmbXY4ajhKd3dtVlJ0Y1dBPT1IA6AGDBKsAQgHEqcBChxWNllaRWJVNUt1VThzY0pPRmlkS2hYQXRtS0E9EiRlMzYwMDFlYi0wODFhLTQzOWMtYmM2Mi1kYmZlMWMyOWQzMzAYACAAKAAw9pPllt0vOK6Ewt7qL0CuhMLe6i9KHGhINlRKNFczZE5zOTdPcjMvQ095QVNFYXo2dz1aHiIcbk1lOENxMDhZT2tVaE4wK1JmUDVUWS9tYUUwPWUAAAAAwj4CYAUSrQEIDRKoAQocQ1F0dStadWRJKzVmaWdGQ1c5Mmw2d1pHSjB3PRIkODdhYzIxMmMtMDI5ZC00NWQ1LTg1NDUtZGViOTAxN2FkZGZjGAAgACgAMLqDg/XuMjimvriCxTJApr64gsUyShxLNzlxaGtrVGRMd2Zpd29uOCtPeVc0Y1FQZWs9Wh8iHf1JbE5QTDlmcHFxSDNUcTFNS0FCY1h0WEtBRXM9ZQSi1gfCPgJgBRKtAQgMEqgBChxuTkVsMUgxQ0xSb3ZzMGs0UlJYbUJ1R09xSEU9EiRkZjU1Y2RiMC1hOTljLTQ3NjEtOWIzMi1iOGQ2MDhmYWM5NmIYACAAKAAwuIOD9e4yOPqnsMD3MUD6p7DA9zFKHFF2bXBORFRMTGdyWUhUZHdIVyt3d1Fidm8wST1aHyId+zl4QWJGc0EzeXRETVZiTVVjTTdCZUJuc3YvUT1lqdVlRMI+AmAFEq0BCAkSqAEKHElsbHI1T002bm42Zmw3UmVkVDNFcnAxY3Bnbz0SJDk0N2Y3M2U4LTdiNDgtNGJiOC1iYWFiLWVmNjFiMzk1MWRlNBgAIAAoADC5g4P17jI4j6ewwPcxQI+nsMD3MUocUGkxQ2hTeXVtVmllOExCWGpoSHlDdEw1QlVnPVofIh3eVkhjbTFhbWFTaDJZNG9kQWRTenJYODROYk00PWUV9ICYwj4CYAUSrQEIChKoAQocaXlHUFZ6STdsNWhZRkVUZEFCc051RDFxcURjPRIkNTg0ZjQ3MTQtODE1ZC00YWY4LWI2YzUtMjJiMjAzNDkwNjczGAAgACgAMLaDg/XuMjjcp7DA9zFA3KewwPcxShxFTmFkcUYxbW9icHU4MEVuOXNJVVlwTmdsUUk9Wh8iHe9Ea0JFd0trTkVvUlIvNlhjRmtVYUFGM1hZWkk9ZWkbIvPCPgJgBRKtAQgIEqgBChxlTGd5TzVrakZ3akgwQVFFTkNNUGJnUVZpT2M9EiRiMTc4MGIxNS0zNWRiLTRlOTMtYmFjYy03YWNkOWE1ZDU2MmYYACAAKAAwt4OD9e4yOL6nsMD3MUC+p7DA9zFKHFZjd0NRTGFHYWhKcW51MFdHSW5xNGhJU2dGVT1aHyIdvWlTcjFxM1J0WW95aFVxQ0NIeVZSbEFaSVBFcz1luQvKwsI+AmAFEqwBCAYSpwEKHDNPR1ZtSTBRY25yZ3k3VTUvd3B3ZUFxdmJ5cz0SJGU1NDI3MTU0LWM2NDUtNGU3My05MzczLWI2YTYyYTFmMDg5NRgAIAAoADD2k+WW3S84vYTC3uovQL2Ewt7qL0ocYkFxRUNSRHgyZCtlN1M5NExLand5MUJzTkNnPVoeIhx6KzcvbXVWOFErTWtyQnlhbSt6NHhXTnp2dDQ9ZQAAAADCPgJgABKtAQgLEqgBChxDaG1zbFZHeWNsMFlLNDJldUpZUDgxTW9USEU9EiRmMWVmZTFlYi0xNzExLTRlMDAtYjExMC0zODVjYWI5ZDk4NmQYACAAKAAwtYOD9e4yOO6msMD3MUDuprDA9zFKHFBYOWZ4MGExOTlLSjBLY1F2NEJwN0FkZC9obz1aHyId91YzNE1WcXBTeWRtOEFXQjJmSUtQODcraGxqZz1lyxLijcI+AmAFEo4BCAISiQEKHFljU1RvbnZFU1B3cUNzNEwyY3JWaHY2OEw5OD0SJGU3M2YzNWM0LTMyMTAtNWZhMC1iMGNiLTdkN2E5OTQ3MmZmMBgAIAAoADCE7ZPnoS8474PC3uovQO+Dwt7qL0ocb1BWa2h3QlJiVjY1S0NXUjIrSU9OSFdvT3U4PVoAZQAAAADCPgJgABKOAQgBEokBChx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9EiQzYmYyMjIyNC04YTNjLTVhM2ItOGFiNi1kZjQ1ZmQ4Y2ZiOGMYACAAKAAwhO2T56EvOLGDwt7qL0Cxg8Le6i9KHGFSQ1dMZ2hGOWI1SW5xS0lEdnVKL2p2UWtGYz1aAGUAAAAAwj4CYAASrQEIDhKoAQocMU15UUhTUFRoaTFrRkdETEdIbmdEK0tiaUxvPRIkOGNmMDc4YmYtZTgwZi00NWZiLWFkNWItZjk3N2UyMGM2YTUxGAAgACgAMKef2uX5MjjskYP17jJA7JGD9e4yShxBOUxGNk5aYnpnVzE5VWc1UlpMcHhxQzVYL2M9Wh8iHf5EY1dENUJIRVpBV2tjTndNaGlhcm9tcXR3YWs9Zf2cjErCPgJgBRKOAQgDEokBChxuamdEdTg4ZUNydlhwODZwRDdmSEdjcUZwODg9EiRiMWIzMTQ0My1hNGMyLTU2ZjgtOTVkMy00MDRmMzAxZjQ2ZjEYACAAKAAwhO2T56EvOMCDwt7qL0DAg8Le6i9KHHl6TkIwMWNuNTRBN2NSVTB1VCsvUGdtVHRVbz1aAGUAAAAAwj4CYAAwADgA",
+   "version": 1
+}
