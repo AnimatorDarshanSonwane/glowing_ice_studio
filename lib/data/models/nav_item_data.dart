@@ -8,3 +8,6 @@ final List<NavItemModel> navItems = [
   NavItemModel(title: 'BLOG'),
   NavItemModel(title: 'ABOUT US'),
 ];
+
+
+
