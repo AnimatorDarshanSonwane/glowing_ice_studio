@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 class NavItemViewModel {
   final List<String> ourWorksItems = [
     'Games',
@@ -20,20 +22,22 @@ class NavItemViewModel {
 
   void handleItemSelected(String item) {
     // Add routing or logic
-    print('Selected item: $item');
+    if (kDebugMode) {
+      print('Selected item: $item');
+    }
   }
 
   List<String> getItemsFor(String navTitle) {
-    switch (navTitle.toLowerCase()) {
-      case 'our works':
-        return ourWorksItems;
-      case 'industries':
-        return industriesItems;
-      case 'case studies':
-      case 'blog':
-        return []; // explicitly return empty list (no dropdown)
-      default:
-        return [];
-    }
+  switch (navTitle.toLowerCase()) {
+    case 'our works':
+      return ourWorksItems;
+    case 'industries':
+      return industriesItems;
+    case 'case studies':
+    case 'blog':
+      return []; // explicitly return empty list (no dropdown)
+    default:
+      return [];
   }
+}
 }

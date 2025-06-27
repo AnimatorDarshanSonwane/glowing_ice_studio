@@ -16,6 +16,7 @@ class TopAppBarWidget extends StatelessWidget {
       height: 80,
       padding: const EdgeInsets.symmetric(horizontal: 24),
       decoration: BoxDecoration(
+        // ignore: deprecated_member_use
         color: Colors.black.withOpacity(backgroundOpacity),
         borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(10),
@@ -69,7 +70,7 @@ class TopAppBarWidget extends StatelessWidget {
                     }
 
                     return NavItemWidget(item: item);
-                  }).toList(),
+                  }),
                 ],
               ),
             ),

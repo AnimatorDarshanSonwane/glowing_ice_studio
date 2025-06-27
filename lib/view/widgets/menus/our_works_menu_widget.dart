@@ -18,6 +18,7 @@ class OurWorksMenuWidget extends StatelessWidget {
         width: 220,
         padding: const EdgeInsets.symmetric(vertical: 12),
         decoration: BoxDecoration(
+          // ignore: deprecated_member_use
           color: Colors.black.withOpacity(0.85),
           border: const Border(
             top: BorderSide(color: Color(0xFFFF9100), width: 2),
@@ -28,6 +29,7 @@ class OurWorksMenuWidget extends StatelessWidget {
           children: items.map((item) {
             return InkWell(
               onTap: () => onItemSelected?.call(item),
+              // ignore: deprecated_member_use
               hoverColor: Colors.orange.withOpacity(0.1),
               child: Padding(
                 padding:

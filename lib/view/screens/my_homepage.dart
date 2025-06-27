@@ -74,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.grey[300],
                     child: Text(item.title),
                   );
-                }).toList(),
+                }),
               ],
             ),
           ),
