@@ -4,6 +4,7 @@ import '../../viewmodel/nav_item_view_model.dart';
 
 class NavItemController {
   bool isHovered = false;
+  bool isDropdownHovered = false;
   OverlayEntry? overlayEntry;
   final NavItemViewModel viewModel = NavItemViewModel();
 
@@ -14,8 +15,8 @@ class NavItemController {
     required VoidCallback removeOverlay,
   }) {
     final lowerTitle = navTitle.toLowerCase();
+    // Skip dropdown for case studies and blog
 
-    // Skip dropdown for Case Studies and Blog
     if (lowerTitle == 'case studies' || lowerTitle == 'blog') return;
 
     final items = viewModel.getItemsFor(navTitle);
@@ -26,15 +27,43 @@ class NavItemController {
     overlayEntry = OverlayEntry(
       builder: (context) {
         return Positioned(
-          top: offset.dy + renderBox.size.height + 30,
-          left: offset.dx,
+          top: offset.dy + renderBox.size.height,
+          left: offset.dx + 12,
           child: MouseRegion(
-            onExit: (_) => removeOverlay(),
+            onEnter: (_) {
+              isDropdownHovered = true;
+              isHovered = true;
+            },
+            onExit: (_) {
+              isDropdownHovered = false;
+              isHovered = false; // ← Ensuring reset here too
+              Future.delayed(const Duration(milliseconds: 200), () {
+                if (!isHovered && !isDropdownHovered ) {
+                  removeOverlay();
+                  isHovered = false; // Reset hovered state
+                  removeDropdown();
+                  
+                  //debugPrint('not hovered and not dropdown hovered, removing dropdown');
+                }
+                else if (isHovered && !isDropdownHovered) {
+                  isHovered = false; // Keep hovered state if still hovering
+                  //debugPrint('hovered but not dropdown hovered, keeping dropdown open');
+                }
+                else if (!isHovered && isDropdownHovered) {
+                  isHovered = false; // Keep hovered state if still hovering
+                  //('not hovered but dropdown hovered, keeping dropdown open');
+                }
+                else if (isHovered && isDropdownHovered) {
+                  isHovered = false; // Keep hovered state if still hovering
+                  //debugPrint('hovered and dropdown hovered, keeping dropdown open');
+                }
+              });
+            },
             child: OurWorksMenuWidget(
               items: items,
               onItemSelected: (item) {
                 viewModel.handleItemSelected(item);
-                removeOverlay();
+                removeDropdown();
               },
             ),
           ),

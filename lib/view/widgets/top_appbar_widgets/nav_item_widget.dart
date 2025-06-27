@@ -30,33 +30,63 @@ class _NavItemWidgetState extends State<NavItemWidget> {
     }
   }
 
-  void _handleMouseExit() {
-    setState(() => _controller.isHovered = false);
-    Future.delayed(const Duration(milliseconds: 100), () {
-      if (mounted && _controller.overlayEntry != null) {
-        _controller.removeDropdown();
-      }
-    });
-  }
 
   @override
-  Widget build(BuildContext context) {
-    final Color hoverColor = _controller.isHovered
-        ? const Color(0xFFFF9100)
-        : Colors.white;
+Widget build(BuildContext context) {
+  final Color hoverColor =
+      _controller.isHovered ? const Color(0xFFFF9100) : Colors.white;
 
-    final String lowerTitle = widget.item.title.toLowerCase();
+  final String lowerTitle = widget.item.title.toLowerCase();
+  final bool isSpecialCase = lowerTitle == 'case studies' || lowerTitle == 'blog';
+  final bool showDropdownIcon = widget.item.hasDropdown &&
+      lowerTitle != 'case studies' &&
+      lowerTitle != 'blog';
 
-    final bool showDropdownIcon =
-        widget.item.hasDropdown &&
-        lowerTitle != 'case studies' &&
-        lowerTitle != 'blog';
+  return MouseRegion(
+    onEnter: (_) {
+      _controller.isHovered = true;
+      _handleMouseEnter(context);
+    },
+    onExit: (_) {
+  _controller.isHovered = false;
+  _controller.isDropdownHovered = false; // <-- Ensure both are false
+  Future.delayed(const Duration(milliseconds: 200), () {
+    if (!_controller.isHovered && !_controller.isDropdownHovered && mounted) {
+      _controller.isHovered = false; // Reset hovered state
+      _controller.removeDropdown();
+      setState(() {});
+      //debugPrint('not hovered and not dropdown hovered, removing dropdown widget');
+    } else if (_controller.isHovered && _controller.isDropdownHovered) {
+      _controller.isHovered = true; // Keep hovered state if still hovering
+      setState(() {}); // Ensure the widget rebuilds to reflect the state
+      //debugPrint('hovered and dropdown hovered, keeping dropdown open wigiets');
+    } else if (_controller.isHovered && !_controller.isDropdownHovered) {
+      _controller.isHovered = false; // Keep hovered state if still hovering
+      setState(() {}); // Ensure the widget rebuilds to reflect the state
+      //debugPrint('hovered but not dropdown hovered, keeping dropdown open widget');
+    }else if (_controller.isHovered && !_controller.isDropdownHovered) {
+      _controller.isHovered = false; // Keep hovered state if still hovering
+      setState(() {}); // Ensure the widget rebuilds to reflect the state
+    }
+    
+  });
+},
 
-    return MouseRegion(
-      onEnter: (_) => _handleMouseEnter(context),
-      onExit: (_) => _handleMouseExit(),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12),
+    child: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12),
+      child: Container(
+        height: 70, // 
+        padding: const EdgeInsets.symmetric(vertical: 6),
+        decoration: BoxDecoration(
+          border: Border(
+            bottom: BorderSide(
+              color: _controller.isHovered && !isSpecialCase
+                  ? const Color(0xFFFF9100)
+                  : Colors.transparent,
+              width: 5,
+            ),
+          ),
+          ),
         child: Row(
           children: [
             Text(
@@ -69,11 +99,16 @@ class _NavItemWidgetState extends State<NavItemWidget> {
             ),
             if (showDropdownIcon) ...[
               const SizedBox(width: 4),
-              Icon(Icons.arrow_drop_down, color: hoverColor, size: 18),
+              Icon(
+                Icons.arrow_drop_down,
+                color: hoverColor,
+                size: 18,
+              ),
             ],
           ],
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 }
