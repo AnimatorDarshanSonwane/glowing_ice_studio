@@ -1,4 +1,3 @@
-
 class NavItemViewModel {
   final List<String> ourWorksItems = [
     'Games',
@@ -10,8 +9,31 @@ class NavItemViewModel {
     'Gamification',
   ];
 
+  final List<String> industriesItems = [
+    'Metaverse Solutions',
+    'Heavy Industry Solutions',
+    'Edutainment Solutions',
+    'Banking Solutions',
+    'Aviation & Automotive Solutions',
+    'Media & Branding Solutions',
+  ];
+
   void handleItemSelected(String item) {
-    // Add logic like navigation or logging
-    print('Selected: $item');
+    // Add routing or logic
+    print('Selected item: $item');
+  }
+
+  List<String> getItemsFor(String navTitle) {
+    switch (navTitle.toLowerCase()) {
+      case 'our works':
+        return ourWorksItems;
+      case 'industries':
+        return industriesItems;
+      case 'case studies':
+      case 'blog':
+        return []; // explicitly return empty list (no dropdown)
+      default:
+        return [];
+    }
   }
 }

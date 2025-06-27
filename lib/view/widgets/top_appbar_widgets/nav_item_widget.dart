@@ -22,6 +22,7 @@ class _NavItemWidgetState extends State<NavItemWidget> {
       _controller.showDropdown(
         context: context,
         renderBox: renderBox,
+        navTitle: widget.item.title,
         removeOverlay: () => setState(() {
           _controller.removeDropdown();
         }),
@@ -40,8 +41,16 @@ class _NavItemWidgetState extends State<NavItemWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final Color hoverColor =
-        _controller.isHovered ? const Color(0xFFFF9100) : Colors.white;
+    final Color hoverColor = _controller.isHovered
+        ? const Color(0xFFFF9100)
+        : Colors.white;
+
+    final String lowerTitle = widget.item.title.toLowerCase();
+
+    final bool showDropdownIcon =
+        widget.item.hasDropdown &&
+        lowerTitle != 'case studies' &&
+        lowerTitle != 'blog';
 
     return MouseRegion(
       onEnter: (_) => _handleMouseEnter(context),
@@ -58,13 +67,9 @@ class _NavItemWidgetState extends State<NavItemWidget> {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            if (widget.item.hasDropdown) ...[
+            if (showDropdownIcon) ...[
               const SizedBox(width: 4),
-              Icon(
-                Icons.arrow_drop_down,
-                color: hoverColor,
-                size: 18,
-              ),
+              Icon(Icons.arrow_drop_down, color: hoverColor, size: 18),
             ],
           ],
         ),
