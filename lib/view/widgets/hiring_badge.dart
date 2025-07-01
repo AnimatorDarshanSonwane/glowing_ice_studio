@@ -13,11 +13,18 @@ class _HiringBadgeState extends State<HiringBadge> {
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
-      onEnter: (_) => setState(() => _isHovered = true),
-      onExit: (_) => setState(() => _isHovered = false),
-      child: AnimatedOpacity(
-        duration: const Duration(milliseconds: 300),
-        opacity: _isHovered ? 0.5 : 1.0,
+      onEnter: (_) {
+        //debugPrint('Mouse entered HiringBadge');
+        setState(() => _isHovered = true);
+      },
+      onExit: (_) {
+        //debugPrint('Mouse exited HiringBadge');
+        setState(() => _isHovered = false);
+      },
+      cursor: SystemMouseCursors.click,
+      child: AnimatedScale(
+        scale: _isHovered ? 1.05 : 1.0,
+        duration: const Duration(milliseconds: 200),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -26,6 +33,15 @@ class _HiringBadgeState extends State<HiringBadge> {
               decoration: BoxDecoration(
                 color: Colors.orange[800],
                 borderRadius: BorderRadius.circular(6),
+                boxShadow: _isHovered
+                    ? [
+                        BoxShadow(
+                          color: const Color.fromRGBO(255, 165, 0, 0.4),
+                          blurRadius: 8,
+                          offset: const Offset(0, 3),
+                        )
+                      ]
+                    : [],
               ),
               child: const Text(
                 "We're Hiring!",

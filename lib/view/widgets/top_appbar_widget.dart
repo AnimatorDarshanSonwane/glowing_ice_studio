@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:glowing_ice_studio/data/models/nav_item_model.dart';
 import 'package:glowing_ice_studio/view/widgets/hiring_badge.dart';
-import 'package:glowing_ice_studio/view/widgets/top_appbar_widgets/nav_item_widget.dart';
+import 'package:glowing_ice_studio/view/widgets/top_appbar/nav_item_widget.dart';
 import '../../data/models/nav_item_data.dart';
 
 class TopAppBarWidget extends StatelessWidget {
@@ -46,15 +46,7 @@ class TopAppBarWidget extends StatelessWidget {
                           clipBehavior: Clip.none,
                           alignment: Alignment.center,
                           children: [
-                            
-                            // The floating hiring badge with hover logic preserved
-                            const Positioned(
-                              top: 5,
-                              child:
-                                  HiringBadge(), // Contains its own MouseRegion internally
-                            ),
-
-                            // "ABOUT US" item — stays vertically aligned like "BLOG"
+                            // Nav item goes first (behind)
                             Align(
                               alignment: Alignment.center,
                               child: NavItemWidget(
@@ -62,6 +54,15 @@ class TopAppBarWidget extends StatelessWidget {
                                   title: "ABOUT US",
                                   hasDropdown: true,
                                 ),
+                              ),
+                            ),
+
+                            // Hiring badge goes later (in front)
+                            const Positioned(
+                              top: 2,
+                              child: Material(
+                                color: Colors.transparent,
+                                child: HiringBadge(),
                               ),
                             ),
                           ],

@@ -82,7 +82,7 @@ Widget build(BuildContext context) {
             bottom: BorderSide(
               color: _controller.isHovered && !isSpecialCase
                   ? const Color(0xFFFF9100)
-                  : Colors.transparent,
+                  : const Color.fromARGB(0, 197, 73, 73),
               width: 5,
             ),
           ),
