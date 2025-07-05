@@ -93,7 +93,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 // Auto-scrolling logo banner
                 AutoScrollingLogoBanner(),
                 ServicesSection(),
-                GameDevelopmentSection()
+                GameDevelopmentSection(),
+
+                SizedBox(height: 20),
               ],
             ),
           ),

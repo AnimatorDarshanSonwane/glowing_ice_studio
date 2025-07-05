@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:glowing_ice_studio/view/widgets/buttons/checkout_more_button.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/auto_scroll_carousel.dart';
 
 class GameDevelopmentSection extends StatelessWidget {
   const GameDevelopmentSection({super.key});
@@ -7,7 +9,7 @@ class GameDevelopmentSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 1000,
-      color: Colors.white,
+      color: const Color.fromARGB(255, 255, 255, 255),
       child: Column(
         children: [
           // Main Blue Box with rounded corner
@@ -123,7 +125,18 @@ class GameDevelopmentSection extends StatelessWidget {
 
           // Related Portfolio
           Container(
-            color: Colors.white,
+            // Add border radius to match the top section
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: const Color.fromARGB(255, 99, 99, 99),
+                width: 2.0, 
+                
+              ),
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(5),
+                  bottomRight: Radius.circular(5)),
+            ),
+            
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
             child: Column(
               children: [
@@ -132,49 +145,20 @@ class GameDevelopmentSection extends StatelessWidget {
                     Text(
                       'RELATED PORTFOLIO',
                       style: TextStyle(
-                        fontSize: 14,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        letterSpacing: 1.2,
+                        letterSpacing: 1,
                       ),
                     ),
                     Spacer(),
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Text(
-                          'CHECKOUT MORE',
-                          style: TextStyle(
-                            color: Colors
-                                .black, // same as Color.fromARGB(255, 0, 0, 0)
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(width: 6), // spacing between text and icon
-                        Icon(
-                          Icons.double_arrow,
-                          color: Color(0xFFFFA500), // Orange
-                          size: 20,
-                        ),
-                      ],
-                    ),
+                    // Example usage of the CheckoutMoreButton
+                    CheckoutMoreButton(),            
                   ],
                 ),
                 const SizedBox(height: 20),
-
+                
                 // Horizontal portfolio images (mocked)
-                SizedBox(
-                  height: 100,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      PortfolioItem(imagePath: 'assets/gameloft.png'),
-                      PortfolioItem(imagePath: 'assets/ea.png'),
-                      PortfolioItem(imagePath: 'assets/gameloft.png'),
-                      PortfolioItem(imagePath: 'assets/tencent.png'),
-                      PortfolioItem(imagePath: 'assets/wb.png'),
-                    ],
-                  ),
-                ),
+                AutoScrollCarousel(),
               ],
             ),
           ),
@@ -217,6 +201,7 @@ class GameDevButton extends StatelessWidget {
     );
   }
 }
+
 
 class PortfolioItem extends StatelessWidget {
   final String imagePath;
