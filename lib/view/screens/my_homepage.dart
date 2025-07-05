@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:glowing_ice_studio/providers/testimonial_data.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/auto_scrolling_logo_banner.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/client_testimonial_section.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/feature_cards_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/game_development_section.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/homepage_bottom_text.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/homepage_middle_text.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/services_section.dart';
 import 'package:glowing_ice_studio/view/widgets/top_appbar_widget.dart';
+import 'package:glowing_ice_studio/viewmodel/feature_cards_view_model.dart';
+import 'package:provider/provider.dart';
 // import '../../viewmodel/item_list_view_model.dart';
 // import '../../data/models/item_model.dart';
 
@@ -95,7 +100,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 ServicesSection(),
                 GameDevelopmentSection(),
 
-                SizedBox(height: 20),
+                SizedBox(height: 50),
+
+                // Client testimonial section
+                ChangeNotifierProvider(create: (_) => TestimonialData(),
+                child: Container( 
+                  padding: const EdgeInsets.symmetric(horizontal: 400, vertical: 20),
+                  child: ClientTestimonialSection()) ),  
+                SizedBox(height: 100),
+
+                // Feature cards section
+                ChangeNotifierProvider(create: (_) => FeatureCardsViewModel(),
+                child: Container( 
+                  padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 20),
+                  child: FeatureCardsWidget()) ), 
+
+                
               ],
             ),
           ),
