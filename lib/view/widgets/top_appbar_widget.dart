@@ -35,7 +35,7 @@ class TopAppBarWidget extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Image.asset('assets/images/logo_01.png', height: 40),
+                  Image.asset('assets/logo_01.png', height: 40),
                   const SizedBox(width: 24),
 
                   ...navItems.map((item) {

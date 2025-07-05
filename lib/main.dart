@@ -14,11 +14,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // 👈 This line disables the debug banner
       title: 'Flutter Demo',
+      
       theme: ThemeData(
         
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+      
+      ); 
+    
   }
 }
