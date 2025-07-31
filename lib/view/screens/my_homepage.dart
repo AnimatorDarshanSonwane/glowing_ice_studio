@@ -10,6 +10,8 @@ import 'package:glowing_ice_studio/view/widgets/homepage/services_section.dart';
 import 'package:glowing_ice_studio/view/widgets/top_appbar_widget.dart';
 import 'package:glowing_ice_studio/viewmodel/feature_cards_view_model.dart';
 import 'package:provider/provider.dart';
+import 'package:web_smooth_scroll/web_smooth_scroll.dart';
+
 // import '../../viewmodel/item_list_view_model.dart';
 // import '../../data/models/item_model.dart';
 
@@ -62,61 +64,68 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Stack(
         children: [
           // Scrollable content: image + list
-          SingleChildScrollView(
+          WebSmoothScroll(
+            scrollSpeed: 2,
+            scrollAnimationLength: 1500,
+            curve: Curves.linearToEaseOut,
             controller: _scrollController,
-            physics: const ClampingScrollPhysics(), // Smooth scrolling
-            child: Column(
-              children: [
-                // Fullscreen image
-                // Fullscreen image with overlay text
-                SizedBox(
-                  height: screenHeight,
-                  width: double.infinity,
-                  child: Stack(
-                    fit: StackFit.expand,
-                    children: [
-                      Image.asset(
-                        'lib/assets/images/logo_01.png',
-                        fit: BoxFit.cover,
-                      ),
-                      HomePageMiddleText(),
-                      HomepageBottomText()
-                    ],
+            child: SingleChildScrollView(
+              physics: const NeverScrollableScrollPhysics(),
+              controller: _scrollController,
+              //physics: const ClampingScrollPhysics(), // Smooth scrolling
+              child: Column(
+                children: [
+                  // Fullscreen image
+                  // Fullscreen image with overlay text
+                  SizedBox(
+                    height: screenHeight,
+                    width: double.infinity,
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: [
+                        Image.asset(
+                          'lib/assets/images/logo_01.png',
+                          fit: BoxFit.cover,
+                        ),
+                        HomePageMiddleText(),
+                        HomepageBottomText()
+                      ],
+                    ),
                   ),
-                ),
-
-                // List of items
-                // ..._items.map((item) {
-                //   return Container(
-                //     margin: const EdgeInsets.all(12),
-                //     padding: const EdgeInsets.all(20),
-                //     color: Colors.grey[300],
-                //     child: Text(item.title),
-                //   );
-                // }),
-
-                // Auto-scrolling logo banner
-                AutoScrollingLogoBanner(),
-                ServicesSection(),
-                GameDevelopmentSection(),
-
-                SizedBox(height: 50),
-
-                // Client testimonial section
-                ChangeNotifierProvider(create: (_) => TestimonialData(),
-                child: Container( 
-                  padding: const EdgeInsets.symmetric(horizontal: 400, vertical: 20),
-                  child: ClientTestimonialSection()) ),  
-                SizedBox(height: 100),
-
-                // Feature cards section
-                ChangeNotifierProvider(create: (_) => FeatureCardsViewModel(),
-                child: Container( 
-                  padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 20),
-                  child: FeatureCardsWidget()) ), 
-
-                
-              ],
+            
+                  // List of items
+                  // ..._items.map((item) {
+                  //   return Container(
+                  //     margin: const EdgeInsets.all(12),
+                  //     padding: const EdgeInsets.all(20),
+                  //     color: Colors.grey[300],
+                  //     child: Text(item.title),
+                  //   );
+                  // }),
+            
+                  // Auto-scrolling logo banner
+                  AutoScrollingLogoBanner(),
+                  ServicesSection(),
+                  GameDevelopmentSection(),
+            
+                  SizedBox(height: 50),
+            
+                  // Client testimonial section
+                  ChangeNotifierProvider(create: (_) => TestimonialData(),
+                  child: Container( 
+                    padding: const EdgeInsets.symmetric(horizontal: 400, vertical: 20),
+                    child: ClientTestimonialSection()) ),  
+                  SizedBox(height: 100),
+            
+                  // Feature cards section
+                  ChangeNotifierProvider(create: (_) => FeatureCardsViewModel(),
+                  child: Container( 
+                    padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 20),
+                    child: FeatureCardsWidget()) ), 
+            
+                  
+                ],
+              ),
             ),
           ),
 

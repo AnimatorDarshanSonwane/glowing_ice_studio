@@ -41,8 +41,8 @@ class ClientTestimonialSection extends StatelessWidget {
                   icon: const Icon(Icons.arrow_back_ios),
                   color: Colors.black,
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                    shape: MaterialStateProperty.all<OutlinedBorder>(
+                    backgroundColor: WidgetStateProperty.all<Color>(Colors.white),
+                    shape: WidgetStateProperty.all<OutlinedBorder>(
                       const RoundedRectangleBorder(
                         side: BorderSide(color: Colors.black),
                       ),
@@ -109,8 +109,8 @@ class ClientTestimonialSection extends StatelessWidget {
                   icon: const Icon(Icons.arrow_forward_ios),
                   color: Colors.black,
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-                    shape: MaterialStateProperty.all<OutlinedBorder>(
+                    backgroundColor: WidgetStateProperty.all<Color>(Colors.white),
+                    shape: WidgetStateProperty.all<OutlinedBorder>(
                       const RoundedRectangleBorder(
                         side: BorderSide(color: Colors.black),
                       ),
