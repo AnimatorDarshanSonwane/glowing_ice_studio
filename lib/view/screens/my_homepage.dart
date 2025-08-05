@@ -4,6 +4,7 @@ import 'package:glowing_ice_studio/view/widgets/homepage/about_us_scroll.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/auto_scrolling_logo_banner.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/client_testimonial_section.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/feature_cards_widget.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/featurecard/feature_grid_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/game_development_section.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/homepage_bottom_text.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/homepage_middle_text.dart';
@@ -29,14 +30,14 @@ class _MyHomePageState extends State<MyHomePage> {
   final ScrollController _scrollController = ScrollController();
   double _backgroundOpacity = 0.2;
 
- // final ItemListViewModel _viewModel = ItemListViewModel();
+  // final ItemListViewModel _viewModel = ItemListViewModel();
   //late List<ItemModel> _items;
 
   @override
   void initState() {
     super.initState();
 
-  //_items = _viewModel.getItems();
+    //_items = _viewModel.getItems();
 
     _scrollController.addListener(() {
       double offset = _scrollController.offset;
@@ -89,11 +90,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           fit: BoxFit.cover,
                         ),
                         HomePageMiddleText(),
-                        HomepageBottomText()
+                        HomepageBottomText(),
                       ],
                     ),
                   ),
-            
+
                   // List of items
                   // ..._items.map((item) {
                   //   return Container(
@@ -103,30 +104,59 @@ class _MyHomePageState extends State<MyHomePage> {
                   //     child: Text(item.title),
                   //   );
                   // }),
-            
+
                   // Auto-scrolling logo banner
                   AutoScrollingLogoBanner(),
                   ServicesSection(),
                   GameDevelopmentSection(),
-            
+
                   SizedBox(height: 50),
-            
+
                   // Client testimonial section
-                  ChangeNotifierProvider(create: (_) => TestimonialData(),
-                  child: Container( 
-                    padding: const EdgeInsets.symmetric(horizontal: 400, vertical: 20),
-                    child: ClientTestimonialSection()) ),  
+                  ChangeNotifierProvider(
+                    create: (_) => TestimonialData(),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 400,
+                        vertical: 20,
+                      ),
+                      child: ClientTestimonialSection(),
+                    ),
+                  ),
                   SizedBox(height: 100),
-            
+
                   // Feature cards section
-                  ChangeNotifierProvider(create: (_) => FeatureCardsViewModel(),
-                  child: Container( 
-                    padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 20),
-                    child: FeatureCardsWidget()) ), 
-            
+                  ChangeNotifierProvider(
+                    create: (_) => FeatureCardsViewModel(),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 0,
+                        vertical: 20,
+                      ),
+                      child: FeatureCardsWidget(),
+                    ),
+                  ),
+
                   //about us section
                   const AboutUsHeading(),
-                
+
+                  //Center(
+                  LayoutBuilder(
+                    builder:
+                        (BuildContext context, BoxConstraints constraints) {
+                          return Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 40.0),
+                            child: ConstrainedBox(
+                              constraints: BoxConstraints(
+                                maxWidth: 1000,
+                                // maxHeight will still constrain overall grid
+                                maxHeight: constraints.maxHeight,
+                              ),
+                              child: const FeatureGrid(),
+                            ),
+                          );
+                        },
+                  ),
                 ],
               ),
             ),
@@ -141,4 +171,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
