@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:glowing_ice_studio/providers/testimonial_data.dart';
+import 'package:glowing_ice_studio/view/widgets/buttons/checkout_more_button.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/about_us_scroll.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/auto_scrolling_logo_banner.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/client_testimonial_section.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/feature_cards_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/featurecard/feature_grid_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/game_development_section.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/gameportfolio/game_portfolio_grid_widget.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/gameportfolio/game_portfolio_titile_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/homepage_bottom_text.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/homepage_middle_text.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/services_section.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/statcard/statrow_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/top_appbar_widget.dart';
 import 'package:glowing_ice_studio/viewmodel/feature_cards_view_model.dart';
 import 'package:provider/provider.dart';
@@ -157,6 +161,29 @@ class _MyHomePageState extends State<MyHomePage> {
                           );
                         },
                   ),
+
+                  // Stat Row Widget
+                  const StatsRow(),
+
+                  // Game Portfolio Title Section
+                  Column(
+                    children: [
+                      const SizedBox(height: 40),
+                      const GamePortfolioTitle(),
+                      const SizedBox(height: 20),
+                     // Other widgets like portfolio grid, etc.
+                     Container(
+                      // add left and right padding to center the grid
+                      padding: const EdgeInsets.symmetric(horizontal: 400),
+                      child: const GamePortfolioGrid()),
+                      const SizedBox(height: 40),
+
+                      //Checkout More Button
+                      Center(child: const CheckoutMoreButton()),
+                      const SizedBox(height: 40),
+                    ],
+                  ),
+                   
                 ],
               ),
             ),
