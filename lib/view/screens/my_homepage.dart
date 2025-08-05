@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:glowing_ice_studio/providers/testimonial_data.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/about_us_scroll.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/auto_scrolling_logo_banner.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/client_testimonial_section.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/feature_cards_widget.dart';
@@ -123,7 +124,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                     child: FeatureCardsWidget()) ), 
             
-                  
+                  //about us section
+                  const AboutUsHeading(),
+                
                 ],
               ),
             ),

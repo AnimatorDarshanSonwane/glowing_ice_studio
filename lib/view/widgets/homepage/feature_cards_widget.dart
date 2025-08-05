@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/execute_gameidea_widget.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/why_us_widget.dart';
 import 'package:glowing_ice_studio/viewmodel/feature_cards_view_model.dart';
 import 'dart:math';
 import 'package:provider/provider.dart';
@@ -28,8 +30,8 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
       return const Center(child: Text('Not enough cards to display layout.'));
     }
 
-    const double cardWidth = 270;
-    const double cardHeight = 300;
+    const double cardWidth = 300;
+    const double cardHeight = 270;
     const double overlapX = 150;
     const double overlapY = 150;
     const double centerShift = 100;
@@ -92,18 +94,24 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
 
     return Container(
       decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Color(0xFFFFA500), Color(0xFFFFD700)],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-        ),
+        color: const Color(0xFFF7A700), // Background yellow-orange
       ),
-      child: Center(
-        child: SizedBox(
-          width: stackWidth,
-          height: stackHeight,
-          child: Stack(children: stackChildren),
-        ),
+      child: Column(
+        
+        children: [
+           // Why Us section
+                  WhyUsWidget(),
+          const SizedBox(height: 10),
+          Center(
+            child: SizedBox(
+              width: stackWidth,
+              height: stackHeight,
+              child: Stack(children: stackChildren),
+            ),
+          ),
+          const SizedBox(height: 80),
+          ExecuteGameIdeaWidget(),
+        ],
       ),
     );
   }

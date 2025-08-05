@@ -32,7 +32,7 @@ class _FeatureCardItemState extends State<FeatureCardItem> {
   @override
   Widget build(BuildContext context) {
     BorderRadius? cardBorderRadius;
-    const Radius defaultRadius = Radius.circular(25.0);
+    const Radius defaultRadius = Radius.circular(35.0);
     const Radius zeroRadius = Radius.zero;
 
     if (widget.index == 0) {
@@ -87,7 +87,7 @@ class _FeatureCardItemState extends State<FeatureCardItem> {
               ),
             ],
             borderRadius: cardBorderRadius,
-            border: Border.all(color: Colors.white, width: 2.0),
+            border: Border.all(color: Colors.white, width: 3.0),
           ),
           padding: const EdgeInsets.all(16.0),
           child: Column(
