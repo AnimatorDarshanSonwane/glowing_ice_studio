@@ -94,7 +94,7 @@ class _FeatureCardsWidgetState extends State<FeatureCardsWidget> {
 
     return Container(
       decoration: const BoxDecoration(
-        color: const Color(0xFFF7A700), // Background yellow-orange
+        color: Color(0xFFF7A700), // Background yellow-orange
       ),
       child: Column(
         

@@ -9,6 +9,7 @@ class HomepageBottomText extends StatelessWidget {
       width: double.infinity ,
       margin: const EdgeInsets.only(top: 850), // Adjust margin to position text
       padding: const EdgeInsets.symmetric(horizontal: 20),
+      // ignore: deprecated_member_use
       color: Colors.black.withOpacity(0.8), // Semi-transparent background
       child: Row(
         children: [

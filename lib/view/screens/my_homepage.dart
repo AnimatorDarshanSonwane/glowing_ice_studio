@@ -3,6 +3,8 @@ import 'package:glowing_ice_studio/providers/testimonial_data.dart';
 import 'package:glowing_ice_studio/view/widgets/buttons/checkout_more_button.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/about_us_scroll.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/auto_scrolling_logo_banner.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/casestudies/case_studies_header_widget.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/casestudies/portfolio_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/client_testimonial_section.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/feature_cards_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/featurecard/feature_grid_widget.dart';
@@ -171,19 +173,30 @@ class _MyHomePageState extends State<MyHomePage> {
                       const SizedBox(height: 40),
                       const GamePortfolioTitle(),
                       const SizedBox(height: 20),
-                     // Other widgets like portfolio grid, etc.
-                     Container(
-                      // add left and right padding to center the grid
-                      padding: const EdgeInsets.symmetric(horizontal: 400),
-                      child: const GamePortfolioGrid()),
+                      
+                      // Other widgets like portfolio grid, etc.
+                      Container(
+                        // add left and right padding to center the grid
+                        padding: const EdgeInsets.symmetric(horizontal: 400),
+                        child: const GamePortfolioGrid(),
+                      ),
                       const SizedBox(height: 40),
 
                       //Checkout More Button
                       Center(child: const CheckoutMoreButton()),
-                      const SizedBox(height: 40),
+                      const SizedBox(height: 40),  
                     ],
                   ),
-                   
+
+                  // Case Studies Header
+                  const SizedBox(height: 40),
+                  const CaseStudiesHeader(),
+                  const SizedBox(height: 20),
+                  // Portfolio Widget
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 400),
+                    child: const PortfolioWidget()),
+                  const SizedBox(height: 40),
                 ],
               ),
             ),
