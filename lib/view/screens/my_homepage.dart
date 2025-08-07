@@ -3,11 +3,15 @@ import 'package:glowing_ice_studio/providers/testimonial_data.dart';
 import 'package:glowing_ice_studio/view/widgets/buttons/checkout_more_button.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/about_us_scroll.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/auto_scrolling_logo_banner.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/awardrecognition/award_recognition_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/casestudies/case_studies_header_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/casestudies/portfolio_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/client_testimonial_section.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/contact/contact_widget.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/contact/work_together_header_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/feature_cards_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/featurecard/feature_grid_widget.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/footer/services_footer_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/game_development_section.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/gameportfolio/game_portfolio_grid_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/gameportfolio/game_portfolio_titile_widget.dart';
@@ -173,7 +177,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       const SizedBox(height: 40),
                       const GamePortfolioTitle(),
                       const SizedBox(height: 20),
-                      
+
                       // Other widgets like portfolio grid, etc.
                       Container(
                         // add left and right padding to center the grid
@@ -184,7 +188,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
                       //Checkout More Button
                       Center(child: const CheckoutMoreButton()),
-                      const SizedBox(height: 40),  
+                      const SizedBox(height: 40),
                     ],
                   ),
 
@@ -195,8 +199,42 @@ class _MyHomePageState extends State<MyHomePage> {
                   // Portfolio Widget
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 400),
-                    child: const PortfolioWidget()),
+                    child: const PortfolioWidget(),
+                  ),
                   const SizedBox(height: 40),
+
+                  //award recognition widget
+                  AutoScrollingLogoBanner1(),
+
+                  // contact from widget
+                  //grdient background
+                  Container(
+                    padding: const EdgeInsets.symmetric(vertical: 40),
+                    width: double.infinity,
+                    height: 800, 
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 34, 47, 71),
+                          Color.fromARGB(255, 91, 179, 223),
+                        ],
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        const WorkTogetherHeader(),
+                        const SizedBox(height: 20),
+                        const ContactFormWidget(),
+                      ],
+                    ),
+                  ), 
+                  
+                  
+                  // Footer Section
+                  const ServicesFooterWidget(),
                 ],
               ),
             ),

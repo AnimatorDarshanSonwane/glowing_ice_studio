@@ -5,39 +5,29 @@ class CheckoutMoreButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const Color buttonColor = Color(0xFFE0A341);
-    const double borderRadiusValue = 9999.0;
-
-    return OutlinedButton(
+    return TextButton(
       onPressed: () {
-        debugPrint('Checkout More button tapped!');
+        // Define what happens when the button is pressed.
+        // For example, navigate to a new screen or perform an action.
+        print('Checkout More button pressed!');
       },
-      style: ButtonStyle(
-        foregroundColor: WidgetStatePropertyAll(buttonColor),
-        side: WidgetStatePropertyAll(
-          BorderSide(color: buttonColor, width: 2),
+      style: TextButton.styleFrom(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(25.0), // Rounded corners
+          side: const BorderSide(
+            color: Colors.orange,
+            width: 2.0,
+          ), // Orange border
         ),
-        shape: WidgetStatePropertyAll(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(borderRadiusValue)),
-          ),
-        ),
-        padding: WidgetStatePropertyAll(
-          EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-        ),
-        textStyle: WidgetStatePropertyAll(
-          TextStyle(
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1.1,
-          ),
-        ),
+        foregroundColor: Colors.orange, // Text and icon color
       ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: const [
-          Text('CHECKOUT MORE'),
-          SizedBox(width: 8),
-          Icon(Icons.double_arrow_sharp, color: buttonColor, size: 24),
+      child: const Row(
+        mainAxisSize: MainAxisSize.min, // Ensures the row takes minimum space
+        children: [
+          Text('CHECKOUT MORE', style: TextStyle(fontWeight: FontWeight.bold)),
+          SizedBox(width: 8.0), // Space between text and icon
+          Icon(Icons.arrow_right_alt_sharp,  color: Colors.orange), // Double arrow icon
         ],
       ),
     );
