@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         // useMaterial design 
 
-        useMaterial3: true, // ✅ Enable Material 3
+        //useMaterial3: true, // ✅ Enable Material 3
+        //
+        
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: ChangeNotifierProvider<AwardsData>(

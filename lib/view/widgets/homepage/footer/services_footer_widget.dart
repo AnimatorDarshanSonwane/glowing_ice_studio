@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/footer/our_office_section.dart';
 
 /// A widget that displays text and changes its color when hovered.
 class HoverableText extends StatefulWidget {
@@ -101,131 +102,141 @@ class ServicesFooterWidget extends StatelessWidget {
     }
 
     return Container(
-      color: const Color(0xFF0C0C14), // background color from image
+      color: const Color(0xFF10121C), // background color from image
       // Padding around the footer content responsive to screen size
       // (assuming a 400px width)
       // (if the screen is wider, the padding will be smaller)
       alignment: Alignment.center,
 
-      padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width *0.25, vertical: 40),
+      padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width *0.2, vertical: 40),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    buildColumn(
-                      "SERVICES",
-                      "Game Development Services",
-                      <String>[
-                        "Game Co Development",
-                        "Mobile Game Development",
-                        "PC Game Development",
-                        "Unity3D Game Development",
-                        "Unreal Game Development",
-                        "Console Game Development",
-                        "Game LiveOps Services",
-                        "Game Testing",
-                        "Web3 Game Development",
-                        "NFT Game Development",
-                        "Blockchain Game Development",
-                        "HTML5/WebGL Game Development",
-                        "P2E Game Development",
-                        "RPG Game Development",
-                        "Battle Royale Game Development",
-                        "VR Game Development",
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        buildColumn(
+                          "SERVICES",
+                          "Game Development Services",
+                          <String>[
+                            "Game Co Development",
+                            "Mobile Game Development",
+                            "PC Game Development",
+                            "Unity3D Game Development",
+                            "Unreal Game Development",
+                            "Console Game Development",
+                            "Game LiveOps Services",
+                            "Game Testing",
+                            "Web3 Game Development",
+                            "NFT Game Development",
+                            "Blockchain Game Development",
+                            "HTML5/WebGL Game Development",
+                            "P2E Game Development",
+                            "RPG Game Development",
+                            "Battle Royale Game Development",
+                            "VR Game Development",
+                          ],
+                          isGold: true,
+                        ),
                       ],
-                      isGold: true,
                     ),
-                  ],
-                ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        // Adjusted space above Game Art Services to align horizontally with
+                        // "Game Development Services" which is preceded by "SERVICES" heading and spacing.
+                        const SizedBox(height: _approxPrimaryHeadingPlusSpacing),
+                        buildColumn("", "Game Art Services", <String>[
+                          "3D Game Art",
+                          "AAA Game Art",
+                          "Character Design",
+                          "Environment Design",
+                          "3D Modeling",
+                          "3D Character Design",
+                          "Slot Game Art",
+                          "Casual Game Art",
+                          "3D Animation",
+                          "Asset Production",
+                          "UI/UX",
+                        ], isGold: true),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        // Adjusted space above Resource Augmentation to align horizontally with
+                        // "Game Development Services" which is preceded by "SERVICES" heading and spacing.
+                        const SizedBox(height: _approxPrimaryHeadingPlusSpacing),
+                        buildColumn("", "Resource Augmentation", <String>[
+                          "Hire Game Developers",
+                          "Hire Game Designers",
+                          "Hire 2D Artists",
+                          "Hire 3D Artists",
+                          "Hire UI UX Designers",
+                          "Hire 2D Animator",
+                          "Hire 3D Animator",
+                        ], isGold: true),
+                        const SizedBox(
+                          height: 20,
+                        ), // Spacing between the two stacked columns
+                        buildColumn("", "VR/XR Simulation", <String>[
+                          "VR Solutions",
+                          "Simulations",
+                          "Learning and Education",
+                          "Metaverse Services",
+                        ], isGold: true),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        // Added space above RESOURCES to align horizontally with
+                        // "Game Development Services" which is preceded by "SERVICES" heading and spacing.
+                        //const SizedBox(height: _approxPrimaryHeadingPlusSpacing),
+                        buildColumn("", "RESOURCES", <String>[
+                          "Press Release",
+                          "Blog",
+                          "FAQ",
+                          "Process",
+                          "Career",
+                        ]),
+                        const SizedBox(
+                          height: 20,
+                        ), // Spacing between the two stacked columns
+                        buildColumn("", "OUR PORTFOLIOS", <String>[
+                          "Games",
+                          "Art & Design",
+                          "Kid Games",
+                          "Enterprise Apps",
+                          "VR & Simulation",
+                        ]),
+                      ],
+                    ),
+                  ),
+                ],
               ),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    // Adjusted space above Game Art Services to align horizontally with
-                    // "Game Development Services" which is preceded by "SERVICES" heading and spacing.
-                    const SizedBox(height: _approxPrimaryHeadingPlusSpacing),
-                    buildColumn("", "Game Art Services", <String>[
-                      "3D Game Art",
-                      "AAA Game Art",
-                      "Character Design",
-                      "Environment Design",
-                      "3D Modeling",
-                      "3D Character Design",
-                      "Slot Game Art",
-                      "Casual Game Art",
-                      "3D Animation",
-                      "Asset Production",
-                      "UI/UX",
-                    ], isGold: true),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    // Adjusted space above Resource Augmentation to align horizontally with
-                    // "Game Development Services" which is preceded by "SERVICES" heading and spacing.
-                    const SizedBox(height: _approxPrimaryHeadingPlusSpacing),
-                    buildColumn("", "Resource Augmentation", <String>[
-                      "Hire Game Developers",
-                      "Hire Game Designers",
-                      "Hire 2D Artists",
-                      "Hire 3D Artists",
-                      "Hire UI UX Designers",
-                      "Hire 2D Animator",
-                      "Hire 3D Animator",
-                    ], isGold: true),
-                    const SizedBox(
-                      height: 20,
-                    ), // Spacing between the two stacked columns
-                    buildColumn("", "VR/XR Simulation", <String>[
-                      "VR Solutions",
-                      "Simulations",
-                      "Learning and Education",
-                      "Metaverse Services",
-                    ], isGold: true),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    // Added space above RESOURCES to align horizontally with
-                    // "Game Development Services" which is preceded by "SERVICES" heading and spacing.
-                    //const SizedBox(height: _approxPrimaryHeadingPlusSpacing),
-                    buildColumn("", "RESOURCES", <String>[
-                      "Press Release",
-                      "Blog",
-                      "FAQ",
-                      "Process",
-                      "Career",
-                    ]),
-                    const SizedBox(
-                      height: 20,
-                    ), // Spacing between the two stacked columns
-                    buildColumn("", "OUR PORTFOLIOS", <String>[
-                      "Games",
-                      "Art & Design",
-                      "Kid Games",
-                      "Enterprise Apps",
-                      "VR & Simulation",
-                    ]),
-                  ],
-                ),
-              ),
+           
+          
             ],
+            
           ),
+          // container for footer
+                  const OurOfficesSection()
         ],
       ),
+      
     );
   }
 }

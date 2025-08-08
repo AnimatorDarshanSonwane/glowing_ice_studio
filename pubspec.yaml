@@ -36,8 +36,10 @@ dependencies:
   cupertino_icons: ^1.0.8
   provider: ^6.1.5
   marquee: ^2.2.3
-  font_awesome_flutter: ^10.3.0
+  font_awesome_flutter: ^10.9.0
   web_smooth_scroll: ^2.0.0
+  google_fonts: ^6.3.0
+  material_design_icons_flutter: ^7.0.7296
   
 dev_dependencies:
   flutter_test:

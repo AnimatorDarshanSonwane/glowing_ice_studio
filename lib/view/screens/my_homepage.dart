@@ -11,6 +11,7 @@ import 'package:glowing_ice_studio/view/widgets/homepage/contact/contact_widget.
 import 'package:glowing_ice_studio/view/widgets/homepage/contact/work_together_header_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/feature_cards_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/featurecard/feature_grid_widget.dart';
+import 'package:glowing_ice_studio/view/widgets/homepage/footer/footerbar_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/footer/services_footer_widget.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/game_development_section.dart';
 import 'package:glowing_ice_studio/view/widgets/homepage/gameportfolio/game_portfolio_grid_widget.dart';
@@ -231,10 +232,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       ],
                     ),
                   ), 
-                  
-                  
                   // Footer Section
                   const ServicesFooterWidget(),
+
+                  //Footer Bar
+                  const FooterBar(),
+                
                 ],
               ),
             ),
